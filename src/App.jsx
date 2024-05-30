@@ -1,16 +1,25 @@
-import { useState } from 'react'
 import './css/main.css'
-import NavBar from './components/NavBar'
-import ItemListContainer from './components/ItemListContainer'
+import Header from './components/Header'
+import ItemLIstContainer from "./components/ItemListContainer";
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import NotFound from './components/NotFound';
+import Footer from './components/Footer';
+import ProductLIst from './components/ProductLIst';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const numerito = 2;
 
   return (
-    <>
-      <NavBar />
-      <ItemListContainer />
-    </>
+    <BrowserRouter>
+      <Header />
+        <Routes>
+          <Route path='/' element={<ProductLIst />} />
+          <Route path='/productos' element={<ItemLIstContainer />} />
+          <Route path='/*' element={<NotFound />} />
+        </Routes>
+      
+      <Footer />
+    </BrowserRouter>
   )
 }
 

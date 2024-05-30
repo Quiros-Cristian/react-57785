@@ -23,8 +23,30 @@
     color: black;
 }
 
-.descripcion {
-    min-height: 50vh;
+.nav-link.active {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.link-texto {
+    text-decoration: none;
+    color: black;
+}
+
+.productos-container {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+
+.productos-grilla {
     display: grid;
-    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.producto {
+    height: 95%;
+    background-color: rgb(142, 225, 252);
+    border-radius: .5rem;
+    margin: 0.5rem;
+    padding: 1rem;
 }

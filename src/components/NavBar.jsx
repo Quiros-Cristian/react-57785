@@ -1,20 +1,24 @@
 import React from 'react'
-import Carrito from './Carrito'
+import { Link, NavLink } from 'react-router-dom'
 
 const NavBar = () => {
   return (
-    <header className='header'>
-        <h1>Lucila Tejidos</h1>
-        <nav className='nav'>
-            <ul className='navmenu'>
-                <li><a className='nav-link' href="#">Muñecos</a></li>
-                <li><a className='nav-link' href="#">Portachupetes</a></li>
-                <li><a className='nav-link' href="#">Sonajeros</a></li>
-                <li><a className='nav-link' href="#">Carteras</a></li>
-            </ul>
-        </nav>
-        <Carrito />
-    </header>
+      <nav className='nav'>
+        <ul className='navmenu'>
+          <li>
+            <NavLink to="/" activeclassname="active" className='nav-link '>inicio</NavLink>
+          </li>
+          <li>
+            <NavLink to="/productos" activeclassname="active" className='nav-link'>Amigurumis</NavLink>
+          </li>
+          <li>
+            <NavLink to="/sonajeros" activeclassname="active" className='nav-link'>Sonajeros</NavLink>
+          </li>
+          <li>
+            <NavLink to="/portachupetes" activeclassname="active" className='nav-link'>Portachupetes</NavLink>    
+          </li>
+        </ul>
+      </nav>
   )
 }
 

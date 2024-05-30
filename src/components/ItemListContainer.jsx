@@ -1,28 +1,46 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import data from "../data/productos.json"
+import { Link, useParams } from 'react-router-dom';
 
 const ItemListContainer = () => {
+
+  let [productos, setProductos] = useState([]);
+
+  const pedirProductos = () => {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        resolve(data);
+      }, 1000);
+    })
+  }
+
+  useEffect(()=> {
+    pedirProductos()
+      .then((res) => {
+        setProductos(res);
+      })
+
+  })
+
   return (
-    <div className="descripcion">
-      Esta es una pagina dedicada a muñecos y tejidos de crochet.
-      <div className="container">
-        <div className="row">
-          <div className="col-md-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-            voluptatum dolorem, nemo ea vel earum ut corporis praesentium
-            consectetur aspernatur dolorum distinctio at tempore, quo possimus
-            reiciendis sed laboriosam laborum! Sed repellat facere repudiandae
-            ex exercitationem quidem quia consectetur corrupti animi numquam
-            quod, et accusamus doloremque laudantium quasi. Mollitia, aut?
-          </div>
-          <div className="col-md-6">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ipsum
-            voluptatum dolorem, nemo ea vel earum ut corporis praesentium
-            consectetur aspernatur dolorum distinctio at tempore, quo possimus
-            reiciendis sed laboriosam laborum! Sed repellat facere repudiandae
-            ex exercitationem quidem quia consectetur corrupti animi numquam
-            quod, et accusamus doloremque laudantium quasi. Mollitia, aut?
-          </div>
-        </div>
+    <div className="productos-container">
+      <div className="productos-grilla">
+        {
+          productos.length > 0 ?
+              productos.map( producto =>{
+                return <Link className="link-texto" key={producto.id} to={`/productos/${producto.nombre}`}>
+                <div className="producto">
+                  <img src={producto.imagen} />
+                  <h2>{producto.nombre}</h2>
+                  <p>${producto.precio}</p>
+                  <p>{producto.descripcion}</p>
+                </div>
+            
+                </Link>
+                })
+            : "No hay productos"
+        }
+
       </div>
     </div>
   );

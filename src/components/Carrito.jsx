@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Carrito = () => {
+const Carrito = (props) => {
   return (
-    <div className="carrito">🛒1</div>
+    <div className="carrito">🛒{props.numerito}</div>
   )
 }
 
