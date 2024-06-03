@@ -1,8 +1,21 @@
 import React from 'react'
+import { Facebook, Instagram, Whatsapp } from 'react-bootstrap-icons'
 
 const Footer = () => {
   return (
-    <div>Footer</div>
+    <footer>
+      <ul>
+        <li className='links-redes'>
+          <a href="https://www.facebook.com/profile.php?id=100094113379082" target='blank'><Facebook /></a>
+          </li>
+        <li className='links-redes'>
+          <a href="https://www.instagram.com/lucila.tejidos_/" target='blank'><Instagram /></a>
+          </li>
+        <li className='links-redes'>
+          <a href="#" target='blank'><Whatsapp /></a>
+          </li>
+      </ul>
+    </footer>
   )
 }
 

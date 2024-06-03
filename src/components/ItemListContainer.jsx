@@ -1,9 +1,13 @@
 import React, { useEffect, useState } from "react";
 import data from "../data/productos.json"
-import { Link, useParams } from 'react-router-dom';
+import ItemList from "./ItemList";
+import { useParams } from "react-router-dom";
+import category from "../data/categorias.json"
 
 const ItemListContainer = () => {
 
+  let { categoryId } = useParams();
+  let [titulo, setTitulo] = useState("productos");
   let [productos, setProductos] = useState([]);
 
   const pedirProductos = () => {
@@ -17,31 +21,21 @@ const ItemListContainer = () => {
   useEffect(()=> {
     pedirProductos()
       .then((res) => {
-        setProductos(res);
+        if (categoryId) {
+          setTitulo(category.find((cat) => cat.id === categoryId).nombre);
+          setProductos(res.filter((prod)=> prod.categoria.id === categoryId));
+        }else {
+          setTitulo("productos");
+          setProductos(res);
+        }
       })
 
-  })
+  },[categoryId])
 
   return (
-    <div className="productos-container">
-      <div className="productos-grilla">
-        {
-          productos.length > 0 ?
-              productos.map( producto =>{
-                return <Link className="link-texto" key={producto.id} to={`/productos/${producto.nombre}`}>
-                <div className="producto">
-                  <img src={producto.imagen} />
-                  <h2>{producto.nombre}</h2>
-                  <p>${producto.precio}</p>
-                  <p>{producto.descripcion}</p>
-                </div>
-            
-                </Link>
-                })
-            : "No hay productos"
-        }
-
-      </div>
+    <div>
+      <h1>{titulo}</h1>
+      <ItemList  productos={productos}/>
     </div>
   );
 };

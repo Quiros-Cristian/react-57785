@@ -1,73 +1,113 @@
 [
     {
       "id": "1",
-      "nombre": "Camiseta de algodón",
+      "nombre": "Leon Amigurumi",
       "precio": 15.99,
-      "imagen": "pleaceholder.pics/svg",
-      "descripcion": "Camiseta de algodón suave y cómoda, disponible en varios colores."
+      "imagen": "",
+      "descripcion": "Set de nacimiento incluye sonajero portachupete y zapatitos.",
+      "categoria":{
+        "id": "amigurumis",
+        "nombre": "Amigurumis"
+      }
     },
     {
       "id": "2",
-      "nombre": "Zapatillas deportivas",
+      "nombre": "Conejo Amigurumi",
       "precio": 49.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Zapatillas deportivas ideales para correr, con amortiguación y transpirables."
+      "descripcion": "Set de nacimiento incluye sonajero portachupete y zapatitos.",
+      "categoria":{
+        "id": "amigurumis",
+        "nombre": "Amigurumis"
+      }
     },
     {
       "id": "3",
-      "nombre": "Teléfono móvil",
+      "nombre": "Jirafa Amigurumi",
       "precio": 299.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Teléfono móvil con pantalla HD, cámara de alta resolución y procesador rápido."
+      "descripcion": "Set de nacimiento incluye sonajero, portachupete y zapatitos.",
+      "categoria":{
+        "id": "amigurumis",
+        "nombre": "Amigurumis"
+      }
     },
     {
       "id": "4",
-      "nombre": "Portátil",
+      "nombre": "Oso Amigurumi",
       "precio": 599.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Portátil ligero y potente, perfecto para trabajar y entretenimiento."
+      "descripcion": "Set de nacimiento incluye sonajero, portachupete y zapatitos.",
+      "categoria":{
+        "id": "amigurumis",
+        "nombre": "Amigurumis"
+      }
     },
     {
       "id": "5",
-      "nombre": "Tableta",
+      "nombre": "Unicornio",
       "precio": 199.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Tableta con pantalla táctil de alta definición, ideal para multimedia y productividad."
+      "descripcion": "Muñeco de apego Unicornio con sonajero, portachupete y zapatitos.",
+      "categoria":{
+        "id": "amigurumis",
+        "nombre": "Amigurumis"
+      }
     },
     {
       "id": "6",
-      "nombre": "Auriculares inalámbricos",
+      "nombre": "Conejo Chenille",
       "precio": 79.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Auriculares inalámbricos con cancelación de ruido, sonido de alta calidad y diseño moderno."
+      "descripcion": "Muñeco de apego Conejo Chenille con sonajero, portachupete y zapatitos.",
+      "categoria":{
+        "id": "amigurumis",
+        "nombre": "Amigurumis"
+      }
     },
     {
       "id": "7",
-      "nombre": "Cámara digital",
+      "nombre": "Naruto Amigurumi",
       "precio": 399.99,
-      "imagen": "imagen_placeholder_url",
-      "descripcion": "Cámara digital compacta con zoom óptico, grabación de video en Full HD y fácil de usar."
+      "imagen": "../assets/img/imgproductos/naruto.jpg",
+      "descripcion": "Muñeco amigurumi Naruto uzumaki estilo funkko.",
+      "categoria":{
+        "id": "portachupetes",
+        "nombre": "Portachupetes"
+      }
     },
     {
       "id": "8",
-      "nombre": "Reloj inteligente",
+      "nombre": "Luffi One Piece",
       "precio": 129.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Reloj inteligente con seguimiento de actividad, notificaciones y diseño elegante."
+      "descripcion": "Muñeco amigurumi Luffi de One Piece.",
+      "categoria":{
+        "id": "portachupetes",
+        "nombre": "Portachupetes"
+      }
     },
     {
       "id": "9",
-      "nombre": "Mochila",
+      "nombre": "Muñeca Rosie",
       "precio": 39.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Mochila resistente y espaciosa, perfecta para viajes y uso diario."
+      "descripcion": "Muñeca Rosie incluye delantal, vestido, enagua y sus zapatitos.",
+      "categoria":{
+        "id": "sonajeros",
+        "nombre": "Sonajeros"
+      }
     },
     {
       "id": "10",
-      "nombre": "Gafas de sol",
+      "nombre": "Principito",
       "precio": 29.99,
       "imagen": "imagen_placeholder_url",
-      "descripcion": "Gafas de sol con protección UV, diseño moderno y materiales de alta calidad."
+      "descripcion": "Muñeco Amuigurumi Principito con su bufanda.",
+      "categoria":{
+        "id": "sonajeros",
+        "nombre": "Sonajeros"
+      }
     }
   ]
   

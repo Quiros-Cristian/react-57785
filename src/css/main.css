@@ -8,8 +8,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgb(142, 225, 252);
     padding: 1rem;
+    height: 10vh;
+    background: #ee9ca7;
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+
 }
 
 .navmenu {
@@ -33,20 +37,105 @@
     color: black;
 }
 
+.inicio {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+}
+
+.divdetail {
+    min-height: 75vh;
+}
+
+.inicio h2 {
+    background-color: #f05981;
+    color: white;
+    font-size: 3.5rem;
+    margin-bottom: 50px;
+    margin-top: 50px;
+    width: 100%;
+}
+
+
+.gatitos {
+    height: 500px;
+}
+
+.naruto {
+    width: 500px;
+    height: 400px;
+}
+
+.principito {
+    width: 500px;
+    height: 400px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links-redes {
+    gap: 50px;
+}
+
+.links-redes a {
+    color: black;
+    font-size: 4rem;
+    display: flex;
+}
+
+.links-redes :hover {
+    color: #d77683;
+}
+
+main {
+    background-image: url('../assets/img/fondogranderosa.png');
+    background-size: cover;
+    height: 100%;
+
+}
+
 .productos-container {
-   max-width: 1000px;
-   margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .productos-grilla {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    max-width: 1000px;
+    min-height: 75vh;
 }
 
 .producto {
-    height: 95%;
-    background-color: rgb(142, 225, 252);
+    min-height: 25vh;
+    background-color: white;
     border-radius: .5rem;
+    border: 1px solid black;
     margin: 0.5rem;
     padding: 1rem;
+}
+
+.imagenProductos {
+    width: 100%;
+    height: 300px;
+}
+
+footer {
+    background: #ee9ca7;
+    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
+    background: linear-gradient(to right, #ffdde1, #ee9ca7);
+
+}
+
+footer ul {
+    display: flex;
+    height: 15vh;
+    gap: 1rem;
+    list-style-type: none;
+    margin-bottom: 0px;
 }
