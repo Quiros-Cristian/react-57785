@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import data from "../data/productos.json"
 import { useParams } from 'react-router-dom';
+import { doc, getDoc } from "firebase/firestore";
+import { db } from "../firebase/config";
 
 const ItemDetailContainer = () => {
 
@@ -8,7 +9,13 @@ const ItemDetailContainer = () => {
     let [producto, setProducto] = useState();
   
     useEffect(() => {
-      setProducto(data.find((prod) => prod.id === itemId))
+
+      const docRef = doc(db, "productos", itemId)
+        getDoc(docRef)
+        .then(res => {
+          setProducto({ ...res.data(), id: doc.id })
+        })
+
     }, [itemId]);
   
     return (
@@ -17,7 +24,7 @@ const ItemDetailContainer = () => {
       <div>
       <img src={producto.imagen} />
       <h3>{producto.nombre}</h3>
-      <p>{producto.precio}</p>
+      <p>${producto.precio}</p>
       <p>{producto.descripcion}</p>
       </div>
       : 'cargando...'}

@@ -4,7 +4,6 @@ import category from "../data/categorias.json"
 
 const NavBar = () => {
 
-  console.log(category)
 
   return (
       <nav className='nav'>
