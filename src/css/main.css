@@ -17,8 +17,8 @@
 }
 
 .logo {
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     border-radius: 100px;
 }
 
@@ -38,9 +38,14 @@
     color: black;
 }
 
+.nav-link:hover{
+    color: #f05981;
+}
+
 .nav-link.active {
     font-weight: bold;
     text-decoration: underline;
+    color: #f05981;
 }
 
 .link-texto {
