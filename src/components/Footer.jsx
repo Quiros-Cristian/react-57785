@@ -15,6 +15,9 @@ const Footer = () => {
           <a href="#" target='blank'><Whatsapp /></a>
           </li>
       </ul>
+      <div>
+        <h3>Todos los derechos reserados@</h3>
+      </div>
     </footer>
   )
 }

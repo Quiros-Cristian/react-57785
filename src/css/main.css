@@ -11,9 +11,10 @@
     align-items: center;
     padding: 1rem;
     height: 10vh;
-    background: #ee9ca7;
+    background-color: white;
+    /* background: #ee9ca7;
     background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
-    background: linear-gradient(to right, #ffdde1, #efb4bc);
+    background: linear-gradient(to right, #ffdde1, #efb4bc); */
 }
 
 .logo {
@@ -60,15 +61,16 @@
     justify-content: space-around;
 }
 
-
+.carrito {
+    min-height: 75vh;
+}
 
 .inicio h2 {
-    background-color: #f05981;
-    color: white;
+    background-color: #fae8ea;
+    color: rgb(93, 93, 93);
     font-size: 3.5rem;
-    margin-bottom: 50px;
-    margin-top: 50px;
-    width: 100%;
+    margin: 50px 10px 50px 10px;
+    width: 99%;
 }
 
 
@@ -130,15 +132,16 @@ main {
 }
 
 .producto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     width: 335px;
     flex-wrap: wrap;
-    min-height: 25vh;
     background-color: white;
     border-radius: .5rem;
     border: 1px solid rgb(208, 208, 208);
     padding: 1rem;
     height: 600px;
-    
 }
 
 .imagenProductos {
@@ -158,10 +161,10 @@ main {
 }
 
 footer {
-    background: #ee9ca7;
+    /* background: #ee9ca7;
     background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);
-    background: linear-gradient(to left, #ffdde1, #ee9ca7);
-
+    background: linear-gradient(to left, #ffdde1, #ee9ca7); */
+    background-color: white;
 }
 
 footer ul {
@@ -170,4 +173,10 @@ footer ul {
     gap: 1rem;
     list-style-type: none;
     margin-bottom: 0px;
+}
+
+footer div h3 {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
 }

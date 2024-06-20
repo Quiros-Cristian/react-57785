@@ -4,11 +4,11 @@
         "nombre": "Amigurumis"
     },
     {
-        "id": "sonajeros",
-        "nombre": "Sonajeros"
-    },
-    {
         "id": "portachupetes",
         "nombre": "Portachupetes"
-    }
+    },
+    {
+        "id": "sonajeros",
+        "nombre": "Sonajeros"
+    }   
 ]
