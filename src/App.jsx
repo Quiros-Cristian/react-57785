@@ -9,6 +9,7 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import Carrito from './components/Carrito';
 import { useState } from 'react';
 import { CartContext, CartProvider } from './context/CartContext';
+import Checkout from './components/Checkout';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
             <Route path='/carrito' element={<Carrito />} />
             <Route path='/category/:categoryId' element={<ItemListContainer />} />
             <Route path='/item/:itemId' element={<ItemDetailContainer />} />
+            <Route path='/finalizar-compra' element={<Checkout/>}/>
             <Route path='/*' element={<NotFound />} />
           </Routes>
           <Footer />

@@ -12,9 +12,6 @@
     padding: 1rem;
     height: 10vh;
     background-color: white;
-    /* background: #ee9ca7;
-    background: -webkit-linear-gradient(to right, #ffdde1, #ee9ca7);
-    background: linear-gradient(to right, #ffdde1, #efb4bc); */
 }
 
 .logo {
@@ -118,6 +115,42 @@ main {
     height: 100%;
 }
 
+.mainCheckout {
+    height: 75vh;
+}
+
+.pedidoRealizado {
+    min-height: 75vh;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 50px;
+    align-items: center;
+}
+
+.pedidoRealizado button{
+    width: 200px;
+}
+
+.imagenDeCompra {
+    height: 200px;
+    width: 200px;
+    border-radius: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: #f05981;
+}
+
+button:hover {
+    color: #f05981;
+}
+
 .productos-container {
     max-width: 1000px;
     margin: 0 auto;
@@ -129,6 +162,7 @@ main {
     max-width: 1100px;
     min-height: 75vh;
     gap: 16px;
+    flex-wrap: wrap;
 }
 
 .producto {
@@ -161,10 +195,8 @@ main {
 }
 
 footer {
-    /* background: #ee9ca7;
-    background: -webkit-linear-gradient(to left, #ffdde1, #ee9ca7);
-    background: linear-gradient(to left, #ffdde1, #ee9ca7); */
     background-color: white;
+    margin-top: 20px;
 }
 
 footer ul {

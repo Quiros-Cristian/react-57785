@@ -15,15 +15,24 @@ export const CartProvider = ({children}) => {
     }
 
     const calcularTotal = () => {
-        return carrito.reduce((acc, prod) => acc + prod.precio, 0);
+        return carrito.reduce((acc, prod) => acc + prod.precio, 0).toFixed(2);
     }
 
     const vaciarCarrito = () => {
         setCarrito([]);
     }
 
+    const eliminarProducto = (producto) => {
+       const productoEncontrado = carrito.find(prod => prod.id === producto.id)
+       const indice = carrito.indexOf(productoEncontrado);
+       
+       const nuevoCarrito = [...carrito]
+       nuevoCarrito.splice(indice, 1)
+       setCarrito(nuevoCarrito)
+    }
+
     return(
-        <CartContext.Provider value={ { carrito, agregarAlCarrito, calcularCantidad, calcularTotal, vaciarCarrito } }>
+        <CartContext.Provider value={ { carrito, agregarAlCarrito, calcularCantidad, calcularTotal, vaciarCarrito, eliminarProducto } }>
             {children}
         </CartContext.Provider>
     )

@@ -1,39 +1,35 @@
-import React, { useContext, useEffect, useState } from 'react'
-import { useParams } from 'react-router-dom';
+import React, { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
+import  ItemDetail  from './ItemDetail';
 import { doc, getDoc } from "firebase/firestore";
 import { db } from "../firebase/config";
-import { CartContext } from '../context/CartContext';
 
 const ItemDetailContainer = () => {
 
     let { itemId } = useParams();
-    let [producto, setProducto] = useState();
+    let [producto, setProducto] = useState(undefined);
+    let [loading, setLoading] = useState(true);
 
-    const { agregarAlCarrito} = useContext(CartContext);
-    
     useEffect(() => {
 
-      const docRef = doc(db, "productos", itemId)
-        getDoc(docRef)
+      const docRef = doc(db, "productos", itemId);
+      getDoc(docRef)
         .then(res => {
-          setProducto({ ...res.data(), id: doc.id })
+          if (res.data()) {
+            setProducto( { ...res.data(), id: res.id } );
+          }
+          setLoading(false);
         })
-
+      
     }, [itemId]);
-  
-    return (
-      <div className='divdetail'>
-        {producto ?
-      <div>
-      <img src={producto.imagen} />
-      <h3>{producto.nombre}</h3>
-      <p>${producto.precio}</p>
-      <p>{producto.descripcion}</p>
-      <button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
-      </div>
-      : 'cargando...'}
-      </div>
-    );
-  }
+
+    if (loading) {
+      return <div className='divdetail'>Cargando...</div>
+    } else if (producto) {
+      return <ItemDetail className='divdetail' producto={producto} />
+    } else {
+      return <div className='divdetail'>Producto no encontrado</div>
+    }
+}
 
 export default ItemDetailContainer
