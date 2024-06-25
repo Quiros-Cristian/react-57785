@@ -43,7 +43,8 @@
 
 .collapse {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 400px;
 }
 
 .nav-link {
@@ -240,7 +241,7 @@ footer div h3 {
 
     .collapse {
         display: flex;
-        justify-content: start;
+        padding-left: 0px;
     }
 }
 
