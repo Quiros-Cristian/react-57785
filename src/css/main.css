@@ -245,6 +245,22 @@ footer div h3 {
 }
 
 @media screen and (max-width:800px) {
+
+    .nav {
+        background-color: white !important;
+    }
+
+    .logo {
+        height: 50px;
+        width: 50px;
+        border-radius: 100px;
+    }
+
+    .logoTexto {
+        font-family: "Allura", cursive;
+        font-size: 2.5rem;
+    }
+
     .productos-grilla {
         display: grid;
         grid-template-columns: repeat(1,minmax(335px,1fr));
