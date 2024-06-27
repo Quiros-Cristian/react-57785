@@ -297,6 +297,11 @@ footer div h3 {
         display: flex;
         padding-left: 0px;
     }
+
+    .contenedorProdCarrito{
+        width: 500px;
+    }
+
 }
 
 @media screen and (max-width:800px) {
@@ -323,5 +328,17 @@ footer div h3 {
         min-height: 75vh;
         gap: 16px;
         flex-wrap: wrap;
+    }
+
+    .contenedorProdCarrito{
+        width: 400px;
+        display: flex;
+        flex-direction: column;
+        gap: 0px;
+    }
+
+    .imgCarrito {
+        height: 100px;
+        width: 100px;
     }
 }
