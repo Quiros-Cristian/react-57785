@@ -9,14 +9,14 @@ const NavBar = () => {
 
   return (
 
-      <nav class="navbar navbar-expand-lg bg-body-tertiary nav">
-        <div class="container-fluid">
+      <nav className="navbar navbar-expand-lg bg-body-tertiary nav">
+        <div className="container-fluid">
         <NavLink to={'/'} className={'link-texto'} ><h1 className="logoTexto"><img className="logo" src={Logo} />LucilaTejidos</h1></NavLink>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
+          <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav navmenu">
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav navmenu">
               <li>
                 <NavLink to="/" activeclassname="active" className='nav-link '>Inicio</NavLink>
               </li>

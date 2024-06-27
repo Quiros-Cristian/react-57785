@@ -52,7 +52,7 @@ const Inicio = () => {
             <hr />
 
             <h3>
-                ¿Como se lavan los amigurumis?
+                <strong>¿Como se lavan los amigurumis?</strong>
             </h3>
 
             <h4>
@@ -70,7 +70,7 @@ const Inicio = () => {
 
             <hr />
             <h3>
-                ¿Cómo puedo secar un amigurumi?
+                <strong>¿Cómo puedo secar un amigurumi?</strong>
             </h3>
             <h4>
 

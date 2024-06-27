@@ -11,12 +11,12 @@ const ItemListContainer = () => {
   let [productos, setProductos] = useState([]);
 
   
-
-  useEffect(()=> {
   
+  useEffect(()=> {
+    
     const productosRef = collection(db, "productos");
     const q = categoryId ? query(productosRef, where("categoria.id", "==", categoryId)) : productosRef;
-
+  
     const categoriasRef = collection(db, "categorias");
     let catQuery = categoryId && query(categoriasRef, where("id", "==", categoryId))
 

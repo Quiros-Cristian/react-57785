@@ -9,7 +9,7 @@ const CartWidget = () => {
 
   return (
     <Link  to="/carrito">
-      <CartCheck color="red" />{calcularCantidad()}
+      <CartCheck className='cartCheck'/>{calcularCantidad()}
     </Link>
   )
 }
