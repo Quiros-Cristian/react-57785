@@ -35,7 +35,7 @@ const Checkout = () => {
                 <h1>Muchas gracias por tu compra</h1>
                 <img className='imagenDeCompra' src={Logo} alt="" />
                 <p>Para hacer el seguimiento de tu pedido, identificador es: {docId}</p>
-                <button><Link to={'/'}>Volver a inicio</Link></button>
+                <button className='botonVolver'><Link to={'/'}>Volver a inicio</Link></button>
             </div>
         )
     }

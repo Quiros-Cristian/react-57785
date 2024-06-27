@@ -6,14 +6,18 @@ const ItemDetail = ({ producto }) => {
     const { agregarAlCarrito } = useContext(CartContext);
 
     return (
-        <div className='divdetail'>
-            <div>
-                <img src={producto.imagen} />
-                <h3>{producto.nombre}</h3>
-                <p>${producto.precio}</p>
-                <p>{producto.descripcion}</p>
-                <button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
-            </div>
+        <div className='divDetail'>
+                <div className="productosDetail">
+                  <div className='imgdivDetail'>
+                    <img className='imagenDetail' src={producto.imagen} />
+                  </div>
+                    <h3>{producto.nombre}</h3>
+                    <p>${producto.precio}</p>
+                    <p>{producto.descripcion}</p>
+                    <div className='divBotonesCards'>
+                    <button className='botonCardsItem' onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
+                    </div>
+                </div>
         </div>
     )
 }

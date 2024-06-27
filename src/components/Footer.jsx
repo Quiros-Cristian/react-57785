@@ -16,7 +16,8 @@ const Footer = () => {
           </li>
       </ul>
       <div>
-        <h3>Todos los derechos reserados@</h3>
+        <h3>Todos los derechos reserados@LucilaTejidos</h3>
+        <h3>Made with Quiros Cristian.</h3>
       </div>
     </footer>
   )

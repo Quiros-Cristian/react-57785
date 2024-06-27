@@ -23,17 +23,17 @@ const Inicio = () => {
                 </div>
                 <div className="carousel-inner ">
                     <div className="carousel-item active" data-bs-interval="10000">
-                        <img src={fraseuno} className="d-block w-100" alt="..." />
+                        <img src={fraseuno} className="d-block w-100 imgCarousel" alt="..." />
                             <div className="carousel-caption d-none d-md-block">
                             </div>
                     </div>
                     <div className="carousel-item" data-bs-interval="2000">
-                        <img src={frasedos} className="d-block w-100" alt="..." />
+                        <img src={frasedos} className="d-block w-100 imgCarousel" alt="..." />
                             <div className="carousel-caption d-none d-md-block">
                             </div>
                     </div>
                     <div className="carousel-item">
-                        <img src={frasetres} className="d-block w-100" alt="..." />
+                        <img src={frasetres} className="d-block w-100 imgCarousel" alt="..." />
                             <div className="carousel-caption d-none d-md-block">
                             </div>
                     </div>
