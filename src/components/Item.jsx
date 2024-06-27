@@ -15,8 +15,10 @@ const Item = ( { producto } ) => {
                     <h3>{producto.nombre}</h3>
                     <p>${producto.precio}</p>
                     <p>{producto.descripcion}</p>
-                    <Link to={`/item/${producto.id}`}>Ver mas</Link>
-                    <button onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
+                    <div className='divBotonesCards'>
+                    <button className='botonVerMas'><Link to={`/item/${producto.id}`}>Ver mas</Link></button>
+                    <button className='botonCardsItem' onClick={() => agregarAlCarrito(producto)}>Agregar al carrito</button>
+                    </div>
                 </div>
         </div>
   )
