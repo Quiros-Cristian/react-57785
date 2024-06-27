@@ -42,10 +42,11 @@ const Checkout = () => {
 
   return (
     <div className='mainCheckout'>
-        <form onSubmit={handleSubmit(comprar)}>
+        <form className='formCheckout' onSubmit={handleSubmit(comprar)}>
+            <h4>Ingrese sus datos personales</h4>
             <input type="text" placeholder='Ingrese su nombre' {...register("nombre")} />
             <input type='email' placeholder='Ingrese su email' {...register("email")} />
-            <button type='submit'>Comprar</button>
+            <div><button type='submit'>Comprar</button></div>
         </form>
     </div>
   )

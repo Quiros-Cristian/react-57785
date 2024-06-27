@@ -211,6 +211,37 @@ main {
 
 .mainCheckout {
     height: 75vh;
+    display: flex;
+    justify-content: center;
+}
+
+.formCheckout {
+    text-align: center;
+    margin-top: 20px;
+    padding: 30px 10px 0px 10px;
+    height: 500px;
+    width: 300px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border-radius: 10px;
+    border: 0.5px solid black;
+    background-image: url('../assets/img/fondogranderosa.png');
+}
+
+.formCheckout div {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: end;
+    padding-bottom: 30px;
+}
+
+.formCheckout div button {
+    border: 0px;
+    border-radius: 10px;
+
 }
 
 .pedidoRealizado {
